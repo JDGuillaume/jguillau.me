@@ -2,18 +2,20 @@
 // Sugarcube generated CSS (variables + utilities)
 import "virtual:sugarcube.css";
 
-// Global CSS
+// CubeCSS
+
+// - Globals
 import "@css/global/reset.css";
 import "@css/global/variables.css";
 import "@css/global/global-styles.css";
+
+// Astro
+import { ClientRouter } from "astro:transitions";
 
 // CubeCSS
 import.meta.glob("@css/blocks/*.css", { eager: true });
 import.meta.glob("@css/compositions/*.css", { eager: true });
 import.meta.glob(["@css/utilities/*.css", "!**/*.gen.css"], { eager: true });
-
-// Astro
-import { ClientRouter } from "astro:transitions";
 ---
 
 <html lang="en">
@@ -33,7 +35,7 @@ import { ClientRouter } from "astro:transitions";
     <meta name="generator" content={Astro.generator} />
 
     <!-- Dynamic Meta Tags -->
-    <title>Astro</title>
+    <title>title</title>
 
     <!-- Astro: View Transitions (https://docs.astro.build/en/reference/modules/astro-transitions/) -->
     <ClientRouter />

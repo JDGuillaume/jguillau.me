@@ -1,11 +1,12 @@
 // @ts-check
+import cloudflare from "@astrojs/cloudflare";
+import mdx from "@astrojs/mdx";
+import sitemap from "@astrojs/sitemap";
 import sugarcube from "@sugarcube-sh/vite";
 import { defineConfig, fontProviders } from "astro/config";
 
-import sitemap from "@astrojs/sitemap";
-
-// https://astro.build/config
 export default defineConfig({
+  adapter: cloudflare(),
   experimental: {
     fonts: [
       {
@@ -26,7 +27,7 @@ export default defineConfig({
     ],
     preserveScriptOrder: true,
   },
-  integrations: [sitemap()],
+  integrations: [sitemap(), mdx()],
   site: "https://jguillau.me",
   vite: {
     plugins: [sugarcube()],

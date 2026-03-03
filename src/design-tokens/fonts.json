@@ -3,26 +3,11 @@
     "$type": "fontFamily",
     "$description": "Each array of fonts creates a priority-based order. The first font in the array should be the ideal font, followed by sensible, web-safe fallbacks.",
     "base": {
-      "$value": [
-        "Inter",
-        "Segoe UI",
-        "Roboto",
-        "Helvetica Neue",
-        "Arial",
-        "sans-serif"
-      ],
+      "$value": ["Inter", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif"],
       "$description": "Fonts used for globally set and body text."
     },
     "heading": {
-      "$value": [
-        "Manrope",
-        "Inter",
-        "Segoe UI",
-        "Roboto",
-        "Helvetica Neue",
-        "Arial",
-        "sans-serif"
-      ],
+      "$value": ["Manrope", "Inter", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif"],
       "$description": "Fonts used for headings."
     },
     "mono": {
