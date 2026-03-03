@@ -1,5 +1,29 @@
 // @ts-check
-import { defineConfig } from "astro/config";
+import sugarcube from "@sugarcube-sh/vite";
+import { defineConfig, fontProviders } from "astro/config";
 
 // https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+  experimental: {
+    fonts: [
+      {
+        name: "Manrope",
+        cssVariable: "--font-manrope",
+        provider: fontProviders.fontsource(),
+      },
+      {
+        name: "Inter",
+        cssVariable: "--font-inter",
+        provider: fontProviders.google(),
+      },
+      {
+        name: "IBM Plex Mono",
+        cssVariable: "--font-plex-mono",
+        provider: fontProviders.google(),
+      },
+    ],
+  },
+  vite: {
+    plugins: [sugarcube()],
+  },
+});

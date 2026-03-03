@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "jguillaume-blog",
   "version": "0.0.1",
   "type": "module",
   "scripts": {
@@ -7,15 +7,20 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check",
     "lint": "oxlint",
     "lint:fix": "oxlint --fix",
-    "fmt": "oxfmt",
-    "fmt:check": "oxfmt --check"
+    "test": "vitest",
+    "test:ui": "vitest --ui"
   },
   "dependencies": {
-    "astro": "^5.17.1"
+    "@vitest/ui": "^4.0.18",
+    "astro": "^5.17.1",
+    "vitest": "^4.0.18"
   },
   "devDependencies": {
+    "@sugarcube-sh/vite": "^0.0.4",
     "oxfmt": "^0.36.0",
     "oxlint": "^1.51.0"
   }
