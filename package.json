@@ -5,16 +5,19 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
+    "preview": "pnpm run build && wrangler dev",
     "astro": "astro",
     "fmt": "oxfmt",
     "fmt:check": "oxfmt --check",
     "lint": "oxlint",
     "lint:fix": "oxlint --fix",
     "test": "vitest",
-    "test:ui": "vitest --ui"
+    "test:ui": "vitest --ui",
+    "deploy": "pnpm run build && wrangler deploy",
+    "cf-typegen": "wrangler types"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "^12.6.12",
     "@astrojs/rss": "^4.0.15",
     "@vitest/ui": "^4.0.18",
     "astro": "^5.17.1",
@@ -24,6 +27,7 @@
   "devDependencies": {
     "@sugarcube-sh/vite": "^0.0.4",
     "oxfmt": "^0.36.0",
-    "oxlint": "^1.51.0"
+    "oxlint": "^1.51.0",
+    "wrangler": "^4.69.0"
   }
 }

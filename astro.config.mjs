@@ -2,6 +2,8 @@
 import sugarcube from "@sugarcube-sh/vite";
 import { defineConfig, fontProviders } from "astro/config";
 
+import cloudflare from "@astrojs/cloudflare";
+
 // https://astro.build/config
 export default defineConfig({
   experimental: {
@@ -24,7 +26,10 @@ export default defineConfig({
     ],
     preserveScriptOrder: true,
   },
+
   vite: {
     plugins: [sugarcube()],
   },
+
+  adapter: cloudflare(),
 });
