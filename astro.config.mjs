@@ -22,6 +22,7 @@ export default defineConfig({
         provider: fontProviders.google(),
       },
     ],
+    preserveScriptOrder: true,
   },
   vite: {
     plugins: [sugarcube()],
