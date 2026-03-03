@@ -2,6 +2,8 @@
 import sugarcube from "@sugarcube-sh/vite";
 import { defineConfig, fontProviders } from "astro/config";
 
+import sitemap from "@astrojs/sitemap";
+
 // https://astro.build/config
 export default defineConfig({
   experimental: {
@@ -24,6 +26,8 @@ export default defineConfig({
     ],
     preserveScriptOrder: true,
   },
+  integrations: [sitemap()],
+  site: "https://jguillau.me",
   vite: {
     plugins: [sugarcube()],
   },

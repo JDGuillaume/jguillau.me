@@ -1,28 +1,7 @@
 ---
-// Sugarcube generated CSS (variables + utilities)
-import "virtual:sugarcube.css";
-
-// Global styles (order matters here so we don't use vite's built-in glob imports,
-// just to be safe): https://vite.dev/guide/features#glob-import)
-import "@css/global/reset.css";
-import "@css/global/variables.css";
-import "@css/global/global-styles.css";
-
-import.meta.glob("@css/blocks/*.css", { eager: true });
-import.meta.glob("@css/compositions/*.css", { eager: true });
-import.meta.glob(["@css/utilities/*.css", "!**/*.gen.css"], { eager: true });
+import Layout from "layouts/Layout.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body>
-    <h1 class="font-heading">Astro</h1>
-  </body>
-</html>
+<Layout>
+  <h1 class="font-heading">Astro</h1>
+</Layout>

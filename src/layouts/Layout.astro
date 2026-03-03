@@ -1,0 +1,44 @@
+---
+// Sugarcube generated CSS (variables + utilities)
+import "virtual:sugarcube.css";
+
+// Global CSS
+import "@css/global/reset.css";
+import "@css/global/variables.css";
+import "@css/global/global-styles.css";
+
+// CubeCSS
+import.meta.glob("@css/blocks/*.css", { eager: true });
+import.meta.glob("@css/compositions/*.css", { eager: true });
+import.meta.glob(["@css/utilities/*.css", "!**/*.gen.css"], { eager: true });
+
+// Astro
+import { ClientRouter } from "astro:transitions";
+---
+
+<html lang="en">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+
+    <!-- Sitemap -->
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <!-- Astro -->
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Opt-In to View Transitions (https://docs.astro.build/en/reference/modules/astro-transitions/) -->
+    <ClientRouter />
+
+    <!--  -->
+    <title>Astro</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
