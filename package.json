@@ -5,14 +5,19 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
+    "preview": "pnpm run build && wrangler dev",
     "astro": "astro",
+    "cf-typegen": "wrangler types",
+    "deploy": "pnpm run build && wrangler deploy",
     "fmt": "oxfmt",
     "fmt:check": "oxfmt --check",
     "lint": "oxlint",
     "lint:fix": "oxlint --fix",
-    "test": "vitest",
-    "test:ui": "vitest --ui"
+    "test": "vitest run",
+    "test:ci": "vitest run --coverage --reporter=junit --outputFile=test-results.xml",
+    "test:coverage": "vitest run --coverage",
+    "test:ui": "vitest --ui",
+    "test:watch": "vitest"
   },
   "dependencies": {
     "@astrojs/cloudflare": "^12.6.12",
@@ -21,13 +26,14 @@
     "@astrojs/sitemap": "^3.7.0",
     "@vitest/ui": "^4.0.18",
     "astro": "^5.17.1",
-    "vitest": "^4.0.18",
     "zod": "^4.3.6"
   },
   "devDependencies": {
     "@sugarcube-sh/vite": "^0.0.4",
+    "@vitest/coverage-v8": "^4.0.18",
     "oxfmt": "^0.36.0",
     "oxlint": "^1.51.0",
+    "vitest": "^4.0.18",
     "wrangler": "^4.69.0"
   }
 }
