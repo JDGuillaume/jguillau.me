@@ -17,6 +17,8 @@ import Navigation from "@components/Nav/Nav.astro";
 import.meta.glob("@css/blocks/*.css", { eager: true });
 import.meta.glob("@css/compositions/*.css", { eager: true });
 import.meta.glob(["@css/utilities/*.css", "!**/*.gen.css"], { eager: true });
+
+const { pageTitle } = Astro.props;
 ---
 
 <html lang="en">
@@ -36,7 +38,7 @@ import.meta.glob(["@css/utilities/*.css", "!**/*.gen.css"], { eager: true });
     <meta name="generator" content={Astro.generator} />
 
     <!-- Dynamic Meta Tags -->
-    <title>Joey Guillaume</title>
+    <title>{pageTitle}</title>
 
     <!-- Astro: View Transitions (https://docs.astro.build/en/reference/modules/astro-transitions/) -->
     <ClientRouter />
