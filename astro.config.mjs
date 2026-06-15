@@ -3,6 +3,7 @@ import cloudflare from "@astrojs/cloudflare";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import sugarcube from "@sugarcube-sh/vite";
+import robotsTxt from "astro-robots-txt";
 import { defineConfig, fontProviders } from "astro/config";
 
 export default defineConfig({
@@ -26,7 +27,7 @@ export default defineConfig({
       provider: fontProviders.google(),
     },
   ],
-  integrations: [sitemap(), mdx()],
+  integrations: [mdx(), robotsTxt(), sitemap()],
   site: "https://jguillau.me",
   vite: {
     plugins: [sugarcube()],

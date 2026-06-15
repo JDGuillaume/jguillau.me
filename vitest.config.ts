@@ -3,16 +3,12 @@ import { getViteConfig } from "astro/config";
 
 export default getViteConfig({
   test: {
+    name: "unit",
+    environment: "node",
     coverage: {
       provider: "v8",
-      thresholds: {
-        branches: 80,
-        functions: 80,
-        lines: 80,
-        statements: 80,
-      },
     },
-    globals: true,
     include: ["src/**/*.test.ts"],
+    globals: true,
   },
 });

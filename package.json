@@ -15,6 +15,7 @@
     "lint:fix": "oxlint --fix",
     "test": "vitest run",
     "test:ci": "vitest run --coverage --reporter=junit --outputFile=test-results.xml",
+    "test:e2e": "playwright test",
     "test:coverage": "vitest run --coverage",
     "test:ui": "vitest --ui",
     "test:watch": "vitest"
@@ -26,13 +27,18 @@
     "@astrojs/sitemap": "^3.7.3",
     "@vitest/ui": "^4.1.8",
     "astro": "^6.4.6",
+    "astro-robots-txt": "^1.0.0",
     "zod": "^4.4.3"
   },
   "devDependencies": {
+    "@playwright/test": "^1.60.0",
     "@sugarcube-sh/vite": "^0.0.4",
+    "@types/node": "^25.9.3",
+    "@vitest/browser-playwright": "^4.1.8",
     "@vitest/coverage-v8": "^4.1.8",
     "oxfmt": "^0.36.0",
     "oxlint": "^1.69.0",
+    "playwright": "^1.60.0",
     "vitest": "^4.1.8",
     "wrangler": "^4.100.0"
   }
