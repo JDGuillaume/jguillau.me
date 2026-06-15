@@ -18,6 +18,7 @@ My personal home on the web.
 - [CubeCSS](https://cube.fyi/)
 - [Oxfmt](https://oxc.rs/docs/guide/usage/formatter)
 - [Oxlint](https://oxc.rs/docs/guide/usage/linter)
+- [Playwright](https://playwright.dev/)
 - [Sugarcube](https://sugarcube.sh/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Vitest](https://vitest.dev/)

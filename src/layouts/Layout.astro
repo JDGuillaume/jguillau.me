@@ -11,6 +11,7 @@ import "@css/global/global-styles.css";
 
 // Astro
 import { ClientRouter } from "astro:transitions";
+import Navigation from "@components/Nav/Nav.astro";
 
 // CubeCSS
 import.meta.glob("@css/blocks/*.css", { eager: true });
@@ -35,12 +36,13 @@ import.meta.glob(["@css/utilities/*.css", "!**/*.gen.css"], { eager: true });
     <meta name="generator" content={Astro.generator} />
 
     <!-- Dynamic Meta Tags -->
-    <title>title</title>
+    <title>Joey Guillaume</title>
 
     <!-- Astro: View Transitions (https://docs.astro.build/en/reference/modules/astro-transitions/) -->
     <ClientRouter />
   </head>
   <body>
+    <Navigation />
     <slot />
   </body>
 </html>
