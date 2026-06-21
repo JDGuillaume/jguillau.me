@@ -112,7 +112,7 @@ describe("The schema for a Blog Post should...", () => {
     // Ensure that it's valid.
     expect(blogSchema.safeParse(frontmatterWithoutFeatured).success).toBe(true);
 
-    // Ensure that featured is true.
+    // Ensure that featured is false.
     expect(blogSchema.safeParse(frontmatterWithoutFeatured).data?.draft).toBe(
       false,
     );
@@ -137,7 +137,7 @@ describe("The schema for a Blog Post should...", () => {
     // Ensure that it's valid.
     expect(blogSchema.safeParse(frontmatterWithoutDraft).success).toBe(true);
 
-    // Ensure that featured is true.
+    // Ensure that featured is false.
     expect(blogSchema.safeParse(frontmatterWithoutDraft).data?.draft).toBe(
       false,
     );
