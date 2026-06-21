@@ -6,7 +6,9 @@
     "paths": {
       "@components/*": ["./src/components/*"],
       "@css/*": ["./src/css/*"],
-      "@layouts/*": ["./src/layouts/*"]
-    }
+      "@layouts/*": ["./src/layouts/*"],
+      "@schemas/*": ["./src/schemas/*"]
+    },
+    "types": ["vitest/globals"]
   }
 }
