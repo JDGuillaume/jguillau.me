@@ -40,7 +40,8 @@
   border: var(--stroke-solid);
 }
 
-@media (min-width: var(--viewport-mid)) {
+/* Defined at: src/design-tokens/viewports.json */
+@media (min-width: 760) {
   .prose :is(h1, h2, h3) {
     overflow-wrap: unset;
     hyphens: unset;
