@@ -32,6 +32,7 @@ pnpm-debug.log*
 
 # Vitest
 coverage/
+test-results.xml
 
 # Wrangler files
 .wrangler
