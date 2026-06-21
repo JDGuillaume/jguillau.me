@@ -24,25 +24,25 @@
     "test:watch": "vitest"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "14.0.0-beta.2",
-    "@astrojs/mdx": "7.0.0-beta.2",
+    "@astrojs/cloudflare": "14.0.0-beta.3",
+    "@astrojs/mdx": "7.0.0-beta.4",
     "@astrojs/rss": "4.0.15-beta.4",
     "@astrojs/sitemap": "3.6.1-beta.3",
-    "@vitest/ui": "^4.1.8",
-    "astro": "7.0.0-beta.3",
+    "@vitest/ui": "^4.1.9",
+    "astro": "7.0.0-beta.6",
     "astro-robots-txt": "^1.0.0",
     "zod": "^4.4.3"
   },
   "devDependencies": {
-    "@playwright/test": "^1.60.0",
+    "@playwright/test": "^1.61.0",
     "@sugarcube-sh/vite": "^0.0.4",
-    "@types/node": "^25.9.3",
-    "@vitest/browser-playwright": "^4.1.8",
-    "@vitest/coverage-v8": "^4.1.8",
+    "@types/node": "^25.9.4",
+    "@vitest/browser-playwright": "^4.1.9",
+    "@vitest/coverage-v8": "^4.1.9",
     "oxfmt": "^0.36.0",
-    "oxlint": "^1.69.0",
-    "playwright": "^1.60.0",
-    "vitest": "^4.1.8",
-    "wrangler": "^4.100.0"
+    "oxlint": "^1.70.0",
+    "playwright": "^1.61.0",
+    "vitest": "^4.1.9",
+    "wrangler": "^4.103.0"
   }
 }
